@@ -15,8 +15,8 @@
         android:layout_height="match_parent"
         android:scaleType="center"
         android:src="@drawable/car_and_sea"
-        tools:layout_editor_absoluteX="-29dp"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-16dp" />
 
     <ImageButton
         android:id="@+id/backBtnFeedback"
@@ -35,10 +35,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
+        android:background="@drawable/feedback_bg"
         android:text="Спасибо за заказ!!!\n С Вами свяжутся \n в течение 15 мин."
         android:textAlignment="center"
         android:textColor="#3F51B5"
-        android:textSize="34sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

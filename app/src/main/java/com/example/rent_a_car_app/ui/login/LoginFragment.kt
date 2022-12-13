@@ -1,5 +1,6 @@
 package com.example.rent_a_car_app.ui.login
 
+import android.app.Activity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.annotation.StringRes
@@ -19,11 +20,13 @@ import androidx.navigation.Navigation
 import com.example.rent_a_car_app.databinding.FragmentLoginBinding
 
 import com.example.rent_a_car_app.R
+import com.example.rent_a_car_app.ui.Utils
 
 class LoginFragment : Fragment() {
 
     private lateinit var loginViewModel: LoginViewModel
     private var _binding: FragmentLoginBinding? = null
+    private var utils = Utils()
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -110,6 +113,7 @@ class LoginFragment : Fragment() {
                 usernameEditText.text.toString(),
                 passwordEditText.text.toString()
             )
+            utils.hideKeyboard(activity as Activity)
             Navigation.findNavController(it).navigate(R.id.action_loginFragment_to_SecondFragment)
         }
     }
