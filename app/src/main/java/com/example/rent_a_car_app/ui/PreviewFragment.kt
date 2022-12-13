@@ -34,7 +34,13 @@ class PreviewFragment : Fragment() {
 
         binding.signInBtn.setOnClickListener {
 
-            Navigation.findNavController(it).navigate(R.id.action_FirstFragment_to_SecondFragment)
+            Navigation.findNavController(it).navigate(R.id.action_FirstFragment_to_loginFragment)
+
+        }
+
+        binding.signUpBtn.setOnClickListener {
+
+            Navigation.findNavController(it).navigate(R.id.action_FirstFragment_to_loginFragment)
 
         }
     }

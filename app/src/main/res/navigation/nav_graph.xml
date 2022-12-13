@@ -10,10 +10,9 @@
         android:name="com.example.rent_a_car_app.ui.PreviewFragment"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_first">
-
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_FirstFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -27,5 +26,29 @@
     <fragment
         android:id="@+id/carsAboutFragment"
         android:name="com.example.rent_a_car_app.ui.CarsAboutFragment"
-        android:label="CarsAboutFragment" />
+        android:label="CarsAboutFragment" >
+        <action
+            android:id="@+id/action_carsAboutFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_carsAboutFragment_to_fragmentFeedback"
+            app:destination="@id/fragmentFeedback" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.rent_a_car_app.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentFeedback"
+        android:name="com.example.rent_a_car_app.ui.FragmentFeedback"
+        android:label="FragmentFeedback" >
+        <action
+            android:id="@+id/action_fragmentFeedback_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
 </navigation>

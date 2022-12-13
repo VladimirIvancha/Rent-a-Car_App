@@ -9,9 +9,10 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import com.example.rent_a_car_app.CarsListAdapter
 import com.example.rent_a_car_app.R
+import com.example.rent_a_car_app.data.TeslaCars
+import com.example.rent_a_car_app.data.TeslaCarsList
 import com.example.rent_a_car_app.databinding.FragmentSecondBinding
 import com.example.rent_a_car_app.room.CarsData
-import kotlin.random.Random
 
 class CarsListFragment : Fragment() {
 
@@ -67,17 +68,20 @@ class CarsListFragment : Fragment() {
         _binding = null
     }
 
+    var list = TeslaCarsList.teslaCarsList
+
     private fun initCarsList(): List<CarsData> {
 
         val result = arrayListOf<CarsData>()
 
-        for (i in 0..100) {
+        for (i in 0..8) {
             result.add(
                 CarsData(
                     i,
-                    "Name$i", Random.nextDouble(500.0),
-                    "description$i",
-                    "https://images.unsplash.com/photo-1617704548623-340376564e68?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+                    list[i].name,
+                    list[i].price,
+                    list[i].description,
+                    list[i].img,
                     false
                 )
             )
